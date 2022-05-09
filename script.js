@@ -16,15 +16,38 @@ const ids = Array.from(Array(256).keys());
 
  });
 
+ const getId2 = document.querySelectorAll(".divClass");
+
+ getId2.forEach( thiscanbewhatever => thiscanbewhatever.addEventListener("mouseover", ()=>
+ { console.log(thiscanbewhatever.id);
+document.getElementById(thiscanbewhatever.id).style.backgroundColor = "red";
+}));
 
 
+
+
+
+/*
+getId.addEventListener("mouseover", function(e){
+alert(e.this.id)
+
+});
+*/
+/*
  let changeColor = document.getElementById("255");
 
  changeColor.addEventListener("mouseover", () => {
     //console.log(`the id is ${e}`);
      document.getElementById("255").style.backgroundColor= "red";
  });
+*/
+ // NEED to write function that uses class on mouseover
+ //to send the ID
+ //then use that ID to change css color
+ // google "how to get ID using class evenlistener javascript"
 
+ //try this https://stackoverflow.com/questions/19655189/javascript-click-event-listener-on-class
+ //https://stackoverflow.com/questions/20868907/javascript-get-element-id-from-event
 
  /*const changeColor = document.querySelector("255")
 
