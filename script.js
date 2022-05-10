@@ -1,12 +1,22 @@
 
+var x = 16;
+let defaultSquareValue = x*x;
 
+var squaresPerSide = document.getElementById("squaresPerSide");
 
-
+squaresPerSide.addEventListener("click", ()=>{
+var customAmount = prompt("How many squares would you like per side?", 16);
+console.log(`customAmount is equal to ${customAmount}. defaultSquareValue is ${defaultSquareValue}`);
+//var defaultSquareValue = function calculateTotal(){customAmount*customAmount};
+//var ids = Array.from(Array(defaultSquareValue).keys());
+//return needDivs;
+});
  
- 
-const ids = Array.from(Array(256).keys());
+var ids = Array.from(Array(defaultSquareValue).keys());
 
- ids.forEach(function(e){
+var needDivs = divGenerator();
+
+function divGenerator(){ids.forEach(function(e){
      document.getElementById("container").innerHTML += `
         <div class="divClass" id=${e}>
             
@@ -15,10 +25,10 @@ const ids = Array.from(Array(256).keys());
 
 
  });
-
+}
  const getId2 = document.querySelectorAll(".divClass");
 
- getId2.forEach( thiscanbewhatever => thiscanbewhatever.addEventListener("mouseover", ()=>
+ getId2.forEach(thiscanbewhatever => thiscanbewhatever.addEventListener("mouseover", ()=>
  { console.log(thiscanbewhatever.id);
 document.getElementById(thiscanbewhatever.id).style.backgroundColor = "red";
 }));
